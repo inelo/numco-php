@@ -19,7 +19,7 @@ Delta encoding example:
 
 (the more sequential data the better compression ratio)
 
-![charts](/numco_charts.png)
+![charts](https://github.com/inelo/numco-node/blob/master/numco_charts.png)
 
 ## Mini DOC
 Compression
