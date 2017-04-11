@@ -2,6 +2,7 @@
     "name": "inelo/numco",
     "description": "NUMber COmpressor - small library for numeric arrays compression.",
     "license": "MIT",
+    "version": "0.1.0",
     "keywords": ["numco"],
     "authors": [
         {
