@@ -2,7 +2,6 @@
     "name": "inelo/numco",
     "description": "NUMber COmpressor - small library for numeric arrays compression.",
     "license": "MIT",
-    "version": "1.0.0",
     "keywords": ["numco"],
     "authors": [
         {
@@ -10,7 +9,9 @@
             "email": "mamazur@gbox.pl"
         }
     ],
-    "require": {},
+    "require": {
+        "php" : "^7.0"
+    },
     "require-dev": {
         "phpunit/phpunit": "6.1.*"
     },
