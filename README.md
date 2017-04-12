@@ -32,6 +32,10 @@ Decompression
 Numco::decompress(string) : array
     expects compressed base64 encoded string and returns decompressed array of numbers
 ```
+## Composer Installation
+```
+$ composer require inelo/numco
+```
 
 ## Example usage
 ```
