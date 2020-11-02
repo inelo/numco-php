@@ -26,6 +26,8 @@ final class NumcoTest extends TestCase {
     private static $compressedTestData = "eJwztDAy1jEEQRMLAyiLSGhGkmp6QlNDoE8MYb4x"
         ."RZIxNjUA+9UITYexIbqIkTn9HGxhYYFVwtgSRdzS2AAAjgZO9g==";
 
+    private static $compressedEmptyData = "eJwDAAAAAAE=";
+
     public function testCompression()
     {
         $compressed = Numco::compress(static::$testData);
@@ -56,5 +58,17 @@ final class NumcoTest extends TestCase {
         echo "\n\trandom array raw size :\t\t". mb_strlen(implode(",", $randomArray))." B\n";
         echo "\tcompressed random array size :\t ". mb_strlen($compressed)." B\n";
         echo "\tcompression ratio :\t\t". number_format(mb_strlen($compressed)/mb_strlen(implode(",", $randomArray))*100, 2) ." %\n";
+    }
+
+    public function testCompressionOfEmptyArray()
+    {
+        $compressed = Numco::compress([]);
+        $this->assertEquals($compressed, static::$compressedEmptyData);
+    }
+
+    public function testDecompressionOfEmptyArray()
+    {
+        $decompressed = Numco::decompress(static::$compressedEmptyData);
+        $this->assertEquals($decompressed, []);
     }
 }
