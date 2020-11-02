@@ -13,7 +13,7 @@ class Numco {
     public static function decompress (string $data): array {
         $inflatedData =  gzuncompress(base64_decode($data));
         $arrayDelta = [];
-        if (strlen($inflatedData) > 0) {
+        if (!empty($inflatedData)) {
             $arrayDelta = explode(',', $inflatedData);
         }
         return ArrayDelta::getValues($arrayDelta);
