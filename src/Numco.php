@@ -12,7 +12,10 @@ class Numco {
 
     public static function decompress (string $data): array {
         $inflatedData =  gzuncompress(base64_decode($data));
-        $arrayDelta = explode(',', $inflatedData);
+        $arrayDelta = [];
+        if (strlen($inflatedData) > 0) {
+            $arrayDelta = explode(',', $inflatedData);
+        }
         return ArrayDelta::getValues($arrayDelta);
     }
 }
