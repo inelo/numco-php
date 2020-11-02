@@ -63,14 +63,12 @@ final class NumcoTest extends TestCase {
     public function testCompressionOfEmptyArray()
     {
         $compressed = Numco::compress([]);
-        $this->assertEquals(strlen($compressed), 12);
         $this->assertEquals($compressed, static::$compressedEmptyData);
     }
 
     public function testDecompressionOfEmptyArray()
     {
         $decompressed = Numco::decompress(static::$compressedEmptyData);
-        $this->assertEquals(0, count($decompressed));
         $this->assertEquals($decompressed, []);
     }
 }
